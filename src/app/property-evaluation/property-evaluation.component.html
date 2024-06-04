@@ -1,0 +1,13 @@
+<form [formGroup]="evaluationForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <mat-label>Type of Facility</mat-label>
+    <mat-select formControlName="facilityType">
+      <mat-option value="revolving">Revolving</mat-option>
+      <mat-option value="non-revolving">Non-Revolving</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Add other form fields similarly -->
+
+  <button mat-raised-button type="submit" [disabled]="!evaluationForm.valid">Submit</button>
+</form>
